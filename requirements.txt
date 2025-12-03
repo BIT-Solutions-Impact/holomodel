@@ -1,0 +1,6 @@
+openai>=1.91.0
+selenium>=4.28.1
+seleniumbase>=4.34.6
+pydantic>=2.11.7
+pydantic_core>=2.33.2
+pillow>=11.1.0

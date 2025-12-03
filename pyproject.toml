@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "surfer-h-cli"
+version = "0.1.0"
+description = "Open source version of HAI Surfer H agent"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=1.93.0",
+  "pillow>=8,<=11.1",
+  "pydantic>=2.0",
+  "selenium>=4.28.1",
+  "transformers<4.53.0",
+  "vllm>=0.9.1",
+]
+authors = [
+  {name = "Surfer H Contributors"},
+]
+license = {text = "BSD3"}
+keywords = ["agent", "ai", "automation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+surfer-h-cli = "surfer_h_cli.surferh:main"
+
+[project.urls]
+Homepage = "https://github.com/hcompai/open-surferh"
+Documentation = "https://github.com/hcompai/open-surferh#readme"
+Repository = "https://github.com/hcompai/open-surferh"
+"Bug Tracker" = "https://github.com/hcompai/open-surferh/issues"
+
+[dependency-groups]
+dev = [
+  "mypy>=1.4.1",
+  "pre-commit>=2.21.0",
+  "pytest-cov>=4.1.0",
+  "pytest-env>=1.1.5",
+  "pytest>=7.0",
+  "ruff>=0.9.0",
+]
+
+[tool.tomlsort]
+no_sort_tables = true
+sort_inline_arrays = true
+trailing_comma_inline_array = true
